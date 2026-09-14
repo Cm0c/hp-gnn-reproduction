@@ -1,0 +1,22 @@
+# ---- 数据（体积大，请从 PhysioNet 自行下载，见 README）----
+data/
+
+# ---- 训练产物与权重 ----
+checkpoints/
+results/
+*.pt
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

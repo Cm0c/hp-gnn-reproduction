@@ -35,7 +35,10 @@
 **4. 事件级 100% 灵敏度是平凡的。**
 模型在正常序列上的误报率为 7.5%，而单次发作的预测窗口含约 360 条序列，命中接近必然。有判别力的指标是误报率：本复现 0.64 次/小时，论文报告 0.48 次/小时。
 
-完整论述见 [`复现报告.docx`](复现报告.docx)；源码层面的逐条证据见 [`官方源码问题汇总.docx`](官方源码问题汇总.docx)。
+完整论述见 **[复现报告](复现报告.md)**；源码层面的逐条证据见 **[官方源码问题汇总](官方源码问题汇总.md)**。
+
+> 这两份 Markdown 由 [`src/make_markdown.py`](src/make_markdown.py) 从同名 `.docx` 自动导出，内容一致。
+> 需要 Word 版本请直接下载 [`复现报告.docx`](复现报告.docx) 或 [`官方源码问题汇总.docx`](官方源码问题汇总.docx)（GitHub 无法在线预览 docx）。
 
 ## 仓库分工
 
@@ -46,7 +49,9 @@
 | `src/` 下的管线代码（10 个文件） | 逐行编写 |
 | `src/diag_*.py`（3 个诊断脚本） | AI 生成，负责运行与结果验证 |
 | `src/make_*_doc.py`（2 个文档生成脚本） | AI 生成 |
+| `src/make_markdown.py`（docx → Markdown 导出） | AI 生成 |
 | 两份 `.docx` 的正文 | AI 生成 |
+| 两份 `.md` | 由 `make_markdown.py` 自动导出，无手工改动 |
 | `code_2` 对应模块（Hilbert → PLV → 3-clique 超边） | 自行设计——官方补充材料缺失该文件 |
 | 方法本身 | 论文 |
 
@@ -129,7 +134,8 @@ src/
   train.py                训练循环
   eval_events.py          事件级评估
   diag_*.py               诊断脚本
-  make_*_doc.py           文档生成脚本
+  make_*_doc.py           文档生成脚本（docx）
+  make_markdown.py        docx → Markdown 导出
 ```
 
 ## 引用

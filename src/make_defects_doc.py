@@ -2,12 +2,15 @@
 
 一次性脚本，跑一次产出文档即可，不是训练/评估管线的一部分。
 """
+import os
+
 from docx import Document
 from docx.shared import Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 
-OUT = r'd:\hp-gnn-pinn-epilepsy\官方源码问题汇总.docx'
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = os.path.join(ROOT, '官方源码问题汇总.docx')
 
 doc = Document()
 

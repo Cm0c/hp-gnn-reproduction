@@ -2,12 +2,15 @@
 
 一次性脚本。所有数字来自 data/processed/ 下的实验日志与诊断脚本输出。
 """
+import os
+
 from docx import Document
 from docx.shared import Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 
-OUT = r'd:\hp-gnn-pinn-epilepsy\复现报告.docx'
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = os.path.join(ROOT, '复现报告.docx')
 
 doc = Document()
 st = doc.styles['Normal']

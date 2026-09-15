@@ -1,10 +1,22 @@
 # ---- 数据（体积大，请从 PhysioNet 自行下载，见 README）----
 data/
 
+# ---- 数据集压缩包（CHB-MIT 原始包可达数十 GB，绝不能提交）----
+DESTINATION.tar
+*.tar
+*.tar.gz
+*.zip
+*.edf
+
 # ---- 训练产物与权重 ----
 checkpoints/
 results/
 *.pt
+*.pth
+*.ckpt
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
 
 # ---- Python ----
 __pycache__/
@@ -14,6 +26,9 @@ __pycache__/
 .venv/
 venv/
 env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
 
 # ---- 编辑器 / 系统 ----
 .vscode/

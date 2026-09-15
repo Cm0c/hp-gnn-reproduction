@@ -1,0 +1,14 @@
+# HP-GNN 复现：环境依赖
+# 实测环境：Python 3.13.5 / CUDA 12.8 / NVIDIA RTX 5060 Laptop GPU
+#
+# 安装方式（PyTorch 必须用 CUDA 专用源，否则会装成 CPU 版）：
+#   pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu128
+#
+# 验证 CUDA 是否可用：
+#   python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
+
+torch>=2.11.0
+numpy>=2.5.0
+scipy>=1.18.0
+mne>=1.13.0
+python-docx>=1.2.0
